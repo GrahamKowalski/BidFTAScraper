@@ -13,7 +13,7 @@ async def main():
         request_delay=0.5  # Delay between requests in seconds
     )
     
-    search_terms = ["aquarium", "fish tank", "filter"]
+    search_terms = ["aquarium", "fish tank", "filter","monitor","sensor","motor","machine","smart"]
     results_df = await scraper.scrape_search_terms(search_terms)
     
     # Save or process results

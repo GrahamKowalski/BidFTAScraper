@@ -17,6 +17,10 @@ A Python package for scraping auction listings from BidFTA.com. Supports both sy
 - Configurable request delays to respect server limits
 - Comprehensive logging
 
+## Exmaple Return
+
+![Alt text](/reference/example_return.png?raw=true "CSV Data")
+
 ## Installation
 
 Install from source:
