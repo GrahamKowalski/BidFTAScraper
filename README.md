@@ -49,6 +49,19 @@ format_results(results_df, 'auction_results.csv')
 
 ### Asynchronous Usage
 
+#### **IMPORTANT**
+
+As of 1-19-25, aiodns requires a SelectorEventLoop, but Python 3.12 uses ProactorEventLoop.
+For Windows use include:
+
+```python
+import sys
+
+if sys.platform == 'win32':
+    # Force use of selector event loop on Windows
+    asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+```
+
 ```python
 from bidfta_scraper import AsyncBidFTAScraper, format_async_results
 import asyncio
