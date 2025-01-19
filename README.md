@@ -1,6 +1,6 @@
 # BidFTA Scraper
 
-A Python package for scraping auction listings from BidFTA.com. This tool allows you to monitor multiple search terms and track auction items across different locations.
+A Python package for scraping auction listings from BidFTA.com. Supports both synchronous and asynchronous operations for efficient data collection across multiple search terms.
 
 ## Features
 
@@ -29,6 +29,8 @@ pip install -e .
 
 ## Quick Start
 
+### Synchronous Usage
+
 ```python
 from bidfta_scraper import BidFTAScraper, format_results
 
@@ -45,7 +47,32 @@ results_df = scraper.scrape_search_terms(search_terms)
 format_results(results_df, 'auction_results.csv')
 ```
 
-## Advanced Usage
+### Asynchronous Usage
+
+```python
+from bidfta_scraper import AsyncBidFTAScraper, format_async_results
+import asyncio
+
+async def main():
+    # Initialize async scraper with custom settings
+    scraper = AsyncBidFTAScraper(
+        location_id="616",
+        max_concurrent_requests=5,  # Limit concurrent requests
+        request_delay=0.5  # Delay between requests in seconds
+    )
+    
+    # Define search terms
+    search_terms = ["aquarium", "fish tank", "filter"]
+    
+    # Get results asynchronously
+    results_df = await scraper.scrape_search_terms(search_terms)
+    
+    # Format and save results
+    format_async_results(results_df, 'async_results.csv')
+
+if __name__ == "__main__":
+    asyncio.run(main())
+```
 
 ### Custom Location ID
 
