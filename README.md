@@ -52,7 +52,7 @@ format_results(results_df, 'auction_results.csv')
 #### **IMPORTANT**
 
 As of 1-19-25, aiodns requires a SelectorEventLoop, but Python 3.12 uses ProactorEventLoop.
-For Windows use include:
+For Windows use be sure to set event loop correctly:
 
 ```python
 import sys
