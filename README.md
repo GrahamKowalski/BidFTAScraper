@@ -19,14 +19,10 @@ A Python package for scraping auction listings from BidFTA.com. This tool allows
 
 ## Installation
 
-```bash
-pip install bidfta-scraper
-```
-
-Or install from source:
+Install from source:
 
 ```bash
-git clone https://github.com/GrahamKowalski/bidfta-scraper.git
+git clone https://github.com/GrahamKowalski/BidFTAScraper.git
 cd bidfta-scraper
 pip install -e .
 ```
@@ -77,7 +73,7 @@ for item in items:
 
 ```bash
 # Clone the repository
-git clone https://github.com/GrahamKowalski/bidfta-scraper.git
+git clone https://github.com/GrahamKowalski/BidFTAScraper.git
 cd bidfta-scraper
 
 # Create and activate virtual environment
@@ -110,4 +106,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Me - Graham Kowalski
 
-Project Link: [https://github.com/GrahamKowalski/bidfta-scraper](https://github.com/GrahamKowalski/bidfta-scraper)
+Project Link: [https://github.com/GrahamKowalski/BidFTAScraper](https://github.com/GrahamKowalski/BidFTAScraper)

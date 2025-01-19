@@ -4,13 +4,13 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setup(
-    name="bidfta-scraper",
+    name="BidFTAScraper",
     version="0.1.0",
     author="Graham Kowalski",
     description="A scraper for BidFTA.com auction listings",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/GrahamKowalski/bidfta-scraper",
+    url="https://github.com/GrahamKowalski/BidFTAScraper",
     packages=find_packages(exclude=["tests*"]),
     classifiers=[
         "Development Status :: 3 - Alpha",
